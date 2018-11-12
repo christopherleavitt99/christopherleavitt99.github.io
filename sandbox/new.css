@@ -1,0 +1,10 @@
+@media only screen and (min-width: 760) {
+    #tile-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    #nav>ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
