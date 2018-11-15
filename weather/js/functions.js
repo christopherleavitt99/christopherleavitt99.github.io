@@ -21,6 +21,12 @@ function buildWC(speed, temp) {
  feelTemp.innerHTML = wc;
  }
 
+ // Variables for Function Use
+const temp = 31;
+const speed = 5;
+buildWC(speed, temp);
+
+
 /*console.log('My javascript is being read.');
 var color;
 console.log(color);
