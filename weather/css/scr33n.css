@@ -48,16 +48,15 @@ li {
     height: 50px;
 }
 
+
 #dial {
     height: 150px;
     width: 150px;
-    background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+    background: no-repeat center/85% url(/HW/responsive_media/weather-images/wind-pointer.png);
     z-index: 100;
     margin: -.6em auto 0;
     transform: rotate(#deg);
 }
-
-transform: rotate(#deg);
 
 #rain>img {
     width: 80px;
