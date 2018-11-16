@@ -52,8 +52,9 @@ li {
 #dial {
     height: 150px;
     width: 150px;
-    background: no-repeat center/85% url(/HW/responsive_media/weather-images/wind-pointer.png);
-    z-index: 100;
+    background: no-repeat center/85% url('/HW/responsive_media/weather-images/wind-pointer.png');
+    /* background-image: url('/HW/responsive_media/weather-images/wind-pointer.png') */
+    /* z-index: 100; */
     margin: -.6em auto 0;
     transform: rotate(1deg);
 }
