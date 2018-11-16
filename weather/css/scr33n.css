@@ -55,7 +55,7 @@ li {
     background: no-repeat center/85% url(/HW/responsive_media/weather-images/wind-pointer.png);
     z-index: 100;
     margin: -.6em auto 0;
-    transform: rotate(#deg);
+    transform: rotate(1);
 }
 
 #rain>img {
