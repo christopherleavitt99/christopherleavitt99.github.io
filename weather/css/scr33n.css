@@ -97,13 +97,13 @@ li {
     border-right: none;
 }
 
-#dial {
+/* #dial {
     height: 150px;
     width: 150px;
     background: no-repeat center/85% url('/weather/images/wind-pointer.png');
     z-index: 100;
     margin: -.6em auto 0;
-}
+} */
 
 /* 4. Large Screen Rules */
 @media screen and (min-width: 750px) {
