@@ -21,8 +21,10 @@
     feelTemp.innerHTML = wc;
 }
 
-function getCondition(partly cloudy) {
-    if (party cloudy)
+function getCondition(condition) {
+    if (condition == "cloudy"){
+        //do something
+    }
 }
 
 // Wind Dial Function
