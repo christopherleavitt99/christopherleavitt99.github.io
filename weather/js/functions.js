@@ -23,7 +23,7 @@
 
 function getCondition(condition) {
     if (condition == "cloudy"){
-        greeting = "It is cloudy today";
+        return "It is cloudy today";
     }
     //  else (condition == "rainy"){
     //     greeting = "It is rainy today";
@@ -33,7 +33,7 @@ function getCondition(condition) {
     // }
 }
 
-changeSummaryImage()
+changeSummaryImage("It is cloudy today")
 
 // Wind Dial Function
 function windDial(direction) {
