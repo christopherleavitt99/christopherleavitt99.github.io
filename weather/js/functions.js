@@ -25,11 +25,11 @@ function getCondition(condition) {
     if (condition == "cloudy"){
         greeting = "It is cloudy today";
     }
-    // // else (condition == "rainy"){
-    // //     greeting = "It is rainy today";
-    // // }
-    // // else (condition == "sunny"){
-    // //     greeting = "It is sunny today";
+    //  else (condition == "rainy"){
+    //     greeting = "It is rainy today";
+    // }
+    // else (condition == "sunny"){
+    //     greeting = "It is sunny today";
     // }
 }
 
