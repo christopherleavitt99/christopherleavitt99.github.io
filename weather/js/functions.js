@@ -2,7 +2,7 @@
  *  Weather Site JavaScript Functions
  ************************************* */
 // Calculate the Windchill
-ƒtion buildWC(speed, temp) {
+ƒunction buildWC(speed, temp) {
     const feelTemp = document.getElementById('feelTemp');
 
     // Compute the windchill
@@ -19,6 +19,10 @@
     console.log(wc);
     // wc = 'Feels like '+wc+'°F';
     feelTemp.innerHTML = wc;
+}
+
+function getCondition(partly cloudy) {
+    if (party cloudy)
 }
 
 // Wind Dial Function
