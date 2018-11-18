@@ -124,7 +124,7 @@ li {
         text-align: center;
     }
 
-    /*body {}*/
+    /* body {} */
 
     #tile-container {
         display: flex;
@@ -135,9 +135,14 @@ li {
         background-image: raindrops;
     }
 
+    #curWeather {
+        background-size: contain 
+       }
+
     #temperature {
         width: 100px;
         height: 225px;
+        
     }
 
     #wind {
