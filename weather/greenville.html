@@ -33,20 +33,30 @@
         <h2>Greenville, SC</h2>
         <p><b>Zip: 29601</b> | <b>Elevation: 966 ft.</b> | <b>Location: -82.4,34.85</b></p>
         <section id="tile-container">
+            <div id="curWeather">
             <section id="temperature">
+                <p id="feel">Feels Like <span id="feelTemp">65</span>°F</p>
                 <h4>Temperature</h4>
                 <h1>65°F</h1>
                 <p> 72°F 51°F</p>
             </section>
             <section id="wind">
                 <h4>Wind</h4>
-                <p>SW</p>
-                <h4>8 mph</h4>
+                <p class="southwestMark">SW</p>
+                <div id="dial" class="w"></div>
+                    <div id="wind-info">
+                        <p id="wind-speed">8 mph</p>
+                    </div>
+                    <ul id="wind-direction">
+                            <li><b>Direction:</b> NW</li>
+                            <li><b>Gusts:</b> 5 mph</li>
+                        </ul>
             </section>
             <section id=rain>
                 <h3>Thunderstorms</h3>
                 <img src="/weather/plan-images/raindrops.jpg" alt="rain">
             </section>
+        </div>
         </section>
         <section id="forecast">
             <h5>Hourly Forecast</h5>
