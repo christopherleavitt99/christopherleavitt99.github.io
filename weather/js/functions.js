@@ -38,7 +38,7 @@ changeSummaryImage("It is cloudy today")
 // Wind Dial Function
 function windDial(direction) {
     const direction = "NNE"; //Set your own value
-    windDial(direction);
+    // windDial(direction);
 }
 
 // Get the wind dial container
