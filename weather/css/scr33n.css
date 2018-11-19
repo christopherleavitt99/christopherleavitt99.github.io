@@ -48,10 +48,7 @@ li {
     height: 50px;
 }
 
-#curWeather {
-    /* background-size: cover; */
-   }
-   
+
    /* Background pictures for summary */
    .clear {
     background-image: url("/weather/images/clear_small.jpg");
