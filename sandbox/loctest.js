@@ -32,7 +32,8 @@ function getGeoLocation() {
 // Get location code from API
 function getCode(LOCALE){
     const API_KEY = '6aFzeDXqDc83LEjA74OPBsan7kvnKvSZ';
-    const URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=API-Key-Goes-Here&q'+ LOCALE
+    const URL = "https://dataservice.accuweather.com/currentconditions/v1/"+CITY_CODE+"?apikey="+API_KEY+"&details=true";
+
     fetch(URL)
         .then(response => response.json())
         .then(function (data){
