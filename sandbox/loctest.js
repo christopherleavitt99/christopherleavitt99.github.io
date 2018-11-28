@@ -19,9 +19,36 @@ function getGeoLocation() {
             console.log('Lat and Long are: ${LOCALE}.');
 
             //Call getData function, send LOCALE
+            getCode(LOCALE)
             getComputedStyle(LOCALE);
         })
     } else{
         status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
     }
 }
+
+
+// New AccuWeather code
+// Get location code from API
+function getCode(LOCALE){
+    const API_KEY = '6aFzeDXqDc83LEjA74OPBsan7kvnKvSZ';
+    const URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=API-Key-Goes-Here&q'+ LOCALE
+    fetch(URL)
+        .then(response => response.json())
+        .then(function (data){
+            console.log('Json object from getCode function:');           
+            console.log(data);
+            const locData =[]; //Create an array
+            locData['key'] = data.Key;
+            locData['name'] = data.LocalizedName;
+            locData['postal'] = data.PrimaryPostalCode;
+            locData['state'] = data.AdministrativeArea.LocalizedName;
+            locData['geoposition'] = LOCALE;
+            locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
+            //getWeather(locData);
+        })
+        .catch(error => console.log('There was an error:', error))
+}//end getCode function
+
+// Get Current Weather data from API
+// function getWeather(locData){}
