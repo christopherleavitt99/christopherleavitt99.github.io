@@ -37,13 +37,13 @@ function getCondition(condition) {
 changeSummaryImage("It is cloudy today")
 
 // Wind Dial Function
-function windDial(direction) {
-    const direction = "NNE"; //Set your own value
+//function windDial(direction) {
+   // const direction = "NNE"; //Set your own value
     // windDial(direction);
 
 
     // Get the wind dial container
-    const dial = document.getElementById("dial");
+//    const dial = document.getElementById("dial");
 
     // Determine the dial class
     switch (direction) {
