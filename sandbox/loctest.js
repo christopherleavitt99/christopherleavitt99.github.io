@@ -51,5 +51,29 @@ function getCode(LOCALE){
         .catch(error => console.log('There was an error:', error))
 }//end getCode function
 
+
 // Get Current Weather data from API
-// function getWeather(locData){}
+function getWeather(locData) {
+    const API_KEY = 'Your Key Goes Here';
+    const CITY_CODE = locData['key']; // We're getting data out of the object
+    const URL = "https://dataservice.accuweather.com/currentconditions/v1/"+CITY_CODE+"?apikey="+API_KEY+"&details=true";
+    fetch(URL)
+     .then(response => response.json())
+     .then(function (data) {
+      console.log('Json object from getWeather function:');
+      console.log(data); // Let's see what we got back
+      // Start collecting data and storing it
+      locData['currentTemp'] = data[0].Temperature.Imperial.Value;
+      locData['summary'] = data[0].WeatherText;
+      locData['windSpeed'] = data[0].Wind.Speed.Imperial.Value;
+      locData['windUnit'] = data[0].Wind.Speed.Imperial.Unit;
+      locData['windDirection'] = data[0].Wind.Direction.Localized;
+      locData['windGust'] = data[0].WindGust.Speed.Imperial.Value;
+      locData['pastLow'] = data[0].TemperatureSummary.Past12HourRange.Minimum.Imperial.Value;
+      locData['pastHigh'] = data[0].TemperatureSummary.Past12HourRange.Maximum.Imperial.Value;
+      getHourly(locData); // Send data to getHourly function
+      })
+     .catch(error => console.log('There was an error: ', error))
+  } // end getWeather function
+const TEMP = data[0].Temperature.Imperial.Value;
+const TEMP = data[0]['Temperature']['Imperial']['Value'];
