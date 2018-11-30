@@ -39,6 +39,9 @@ li {
 
 /* 3. Mobile First Rule */
 
+.hide
+
+
 #top {
     display: flex;
 }
