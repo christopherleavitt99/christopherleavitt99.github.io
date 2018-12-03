@@ -42,18 +42,6 @@ function format_time(hour) {
   } // end format_time function
 
   // formats a value into a 12h AM/PM time string
-function format_time(hour) {
-    if(hour > 23){
-      hour -= 24;
-    }
-    let amPM = (hour > 11) ? "pm" : "am";
-    if(hour > 12) {
-      hour -= 12;
-    } else if(hour == 0) {
-      hour = "12";
-    }
-    return hour + amPM;
-  } // end format_time function
 
 // New AccuWeather code
 // Get location code from API

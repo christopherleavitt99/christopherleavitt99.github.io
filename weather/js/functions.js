@@ -253,3 +253,18 @@ function getHourly(locData) {
         })
         .catch(error => console.log('There was an error: ', error))
 } // end getHourly function
+function buildPage(locData){
+
+}
+function format_time(hour) {
+    if(hour > 23){
+      hour -= 24;
+    }
+    let amPM = (hour > 11) ? "pm" : "am";
+    if(hour > 12) {
+      hour -= 12;
+    } else if(hour == 0) {
+      hour = "12";
+    }
+    return hour + amPM;
+  } // end format_time function
