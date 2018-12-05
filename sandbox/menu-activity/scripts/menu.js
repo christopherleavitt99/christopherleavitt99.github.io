@@ -34,9 +34,9 @@ let URL = "/sandbox/menu-activity/weather.json";
    console.log(data);
    const locData = {}; // Create an object
    locData['name'] = data[locale]['City'];
-   locData['postal'] = data[locale]['Zip'];
+   locData['postal'] = data[locale]['zip'];
    locData['state'] = data[locale]['State'];
-//    locData['geoposition'] = ;
+   locData['geoposition'] = data[locale]['Latitude'] + "," + data[locale]['Longitude'];
 //    locData['elevation'] = ;
    })
   .catch(error => console.log('There was a getCode error: ', error))
