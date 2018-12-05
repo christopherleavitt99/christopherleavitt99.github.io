@@ -38,52 +38,52 @@ changeSummaryImage("It is cloudy today")
 
 // Wind Dial Function
 //function windDial(direction) {
-   // const direction = "NNE"; //Set your own value
-    // windDial(direction);
+// const direction = "NNE"; //Set your own value
+// windDial(direction);
 
 
-    // Get the wind dial container
+// Get the wind dial container
 //    const dial = document.getElementById("dial");
 
-    // Determine the dial class
-    switch (direction) {
-        case "North":
-        case "N":
-            dial.setAttribute("class", "n"); //"n" is the CSS rule selector
-            break;
-        case "NE":
-        case "NNE":
-        case "ENE":
-            dial.setAttribute("class", "ne");
-            break;
-        case "NW":
-        case "NNW":
-        case "WNW":
-            dial.setAttribute("class", "nw");
-            break;
-        case "South":
-        case "S":
-            dial.setAttribute("class", "s");
-            break;
-        case "SE":
-        case "SSE":
-        case "ESE":
-            dial.setAttribute("class", "se");
-            break;
-        case "SW":
-        case "SSW":
-        case "WSW":
-            dial.setAttribute("class", "sw");
-            break;
-        case "East":
-        case "E":
-            dial.setAttribute("class", "e");
-            break;
-        case "West":
-        case "W":
-            dial.setAttribute("class", "w");
-            break;
-    }
+// Determine the dial class
+switch (direction) {
+    case "North":
+    case "N":
+        dial.setAttribute("class", "n"); //"n" is the CSS rule selector
+        break;
+    case "NE":
+    case "NNE":
+    case "ENE":
+        dial.setAttribute("class", "ne");
+        break;
+    case "NW":
+    case "NNW":
+    case "WNW":
+        dial.setAttribute("class", "nw");
+        break;
+    case "South":
+    case "S":
+        dial.setAttribute("class", "s");
+        break;
+    case "SE":
+    case "SSE":
+    case "ESE":
+        dial.setAttribute("class", "se");
+        break;
+    case "SW":
+    case "SSW":
+    case "WSW":
+        dial.setAttribute("class", "sw");
+        break;
+    case "East":
+    case "E":
+        dial.setAttribute("class", "e");
+        break;
+    case "West":
+    case "W":
+        dial.setAttribute("class", "w");
+        break;
+}
 
 // Wind Dial Function
 function windDial(direction) {
@@ -253,21 +253,29 @@ function getHourly(locData) {
         })
         .catch(error => console.log('There was an error: ', error))
 } // end getHourly function
-function buildPage(locData){
-            document.getElementById("zipcode").innerHTML=locData.postal;
-            document.getElementById("elevation").innerHTML=locData.elevation;
-            document.getElementById("position").innerHTML=locData.geoposition
-//take Locdata and put it in the document
+function buildPage(locData) {
+    document.getElementById("zipcode").innerHTML = locData.postal;
+    document.getElementById("elevation").innerHTML = locData.elevation;
+    document.getElementById("summary").innerHTML = locData.summary;
+    document.getElementById("position").innerHTML = locData.geoposition
+    document.getElementById("temperature").innerHTML = locData.currentTemp
+    document.getElementById("high").innerHTML = locData.hiTemp
+    document.getElementById("low").innerHTML = locData.lowTemp
+    document.getElementById("wspeed").innerHTML = locData.windSpeed
+    document.getElementById("gspeed").innerHTML = locData.windGust
+    document.getElementById("direction").innerHTML = locData.windDirection
+    //take Locdata and put it in the document
 }
+
 function format_time(hour) {
-    if(hour > 23){
-      hour -= 24;
+    if (hour > 23) {
+        hour -= 24;
     }
     let amPM = (hour > 11) ? "pm" : "am";
-    if(hour > 12) {
-      hour -= 12;
-    } else if(hour == 0) {
-      hour = "12";
+    if (hour > 12) {
+        hour -= 12;
+    } else if (hour == 0) {
+        hour = "12";
     }
     return hour + amPM;
-  } // end format_time function
+} // end format_time function
