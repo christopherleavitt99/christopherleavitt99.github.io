@@ -32,10 +32,10 @@ let URL = "/sandbox/menu-activity/weather.json";
   .then(function (data) {
    console.log('Json object from getCode function:');
    console.log(data);
-//    const locData = {}; // Create an object
-//    locData['name'] = ;
-//    locData['postal'] = ;
-//    locData['state'] = ;
+   const locData = {}; // Create an object
+   locData['name'] = data[locale]['City'];
+   locData['postal'] = data[locale]['Zip'];
+   locData['state'] = data[locale]['State'];
 //    locData['geoposition'] = ;
 //    locData['elevation'] = ;
    })
