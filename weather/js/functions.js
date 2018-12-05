@@ -254,6 +254,20 @@ function getHourly(locData) {
         .catch(error => console.log('There was an error: ', error))
 } // end getHourly function
 function buildPage(locData){
+            locData['key'] = data.Key;
+            locData['name'] = data.LocalizedName;
+            locData['postal'] = data.PrimaryPostalCode;
+            locData['state'] = data.AdministrativeArea.LocalizedName;
+            locData['geoposition'] = LOCALE;
+            locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
+            locData['currentTemp'] = data[0].Temperature.Imperial.Value;
+            locData['summary'] = data[0].WeatherText;
+            locData['windSpeed'] = data[0].Wind.Speed.Imperial.Value;
+            locData['windUnit'] = data[0].Wind.Speed.Imperial.Unit;
+            locData['windDirection'] = data[0].Wind.Direction.Localized;
+            locData['windGust'] = data[0].WindGust.Speed.Imperial.Value;
+            locData['pastLow'] = data[0].TemperatureSummary.Past12HourRange.Minimum.Imperial.Value;
+            locData['pastHigh'] = data[0].TemperatureSummary.Past12HourRange.Maximum.Imperial.Value;
 //take Locdata and put it in the document
 }
 function format_time(hour) {
