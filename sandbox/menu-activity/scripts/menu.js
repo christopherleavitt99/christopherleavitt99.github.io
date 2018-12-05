@@ -23,7 +23,6 @@ let LOCALE = cityName
 });
 
 
-
 // Get location code from weather.json file
 function getData(LOCALE) {
 let URL = "/sandbox/menu-activity/weather.json";
@@ -37,7 +36,11 @@ let URL = "/sandbox/menu-activity/weather.json";
    locData['postal'] = data[locale]['zip'];
    locData['state'] = data[locale]['State'];
    locData['geoposition'] = data[locale]['Latitude'] + "," + data[locale]['Longitude'];
+   locData['temp'] = data[locale]['Currenttemp'];
+    locData[summary] = data[locale]['Summary'];
 //    locData['elevation'] = ;
+console.log(locData);
+buildPage(locData)
    })
   .catch(error => console.log('There was a getCode error: ', error))
 } // end getCode function
@@ -45,4 +48,9 @@ let URL = "/sandbox/menu-activity/weather.json";
   // A function for changing a string to TitleCase
   function toTitleCase(str){
     return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  }
+
+  function buildPage(locData){
+    document.getElementById("Currenttemp").innerHTML = locData['temp'] + "&deg; F"
+    document.getElementById("summary").innerHTML = locData['summary']
   }
