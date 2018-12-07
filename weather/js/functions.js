@@ -33,7 +33,7 @@ function getCondition(condition) {
     // }
 }
 
-changeSummaryImage("It is cloudy today")
+function changeSummaryImage(direction){
 
 // Wind Dial Function
 //function windDial(direction) {
@@ -82,6 +82,7 @@ switch (direction) {
     case "W":
         dial.setAttribute("class", "w");
         break;
+}
 }
 
 // Wind Dial Function
