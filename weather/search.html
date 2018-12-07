@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Franklin, ID's Weather</title>
+    <link href="/weather/css/scr33n.css" rel="stylesheet" type="text/css" media="screen">
+    <meta name="author" content="Current weather information (Current, High and Low temperature...)">
+    <meta name="description" content="This is the weather for Franklin, ID">
+    <meta name="viewport" content="width=device-width">
+    <link>
+</head>
+<!-- Chrsitopher Leavitt
+Logan Saunders
+Enrique Snachez
+Idi Ortiz -->
+<body>
+
+    <header id=page-header>
+        <div id="top"><img src="/weather/plan-images/logo.jpeg" alt="logo">
+            <h1>Weather Site</h1>
+        </div>
+        <section>
+            <nav id=page-nav>
+                <p id="status"></p>
+                <ul>
+                    <li><a href="/index.html" title="Go to home page">Home</a></li>
+                    <li>Current</li>
+                    <li>Search</li>
+                    <li><a href="/weather/franklin.html">Franklin ID</a></li>
+                    <li><a href="/weather/greenville.html">Greenville SC</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main class="hide">
+        <h2>Franklin, ID</h2>
+        <p><b>Zip: <span id="zipcode"></span></b> | <b>Elevation: <span id="Elevation"></span></b> | <b>Location: <span id="position"></span></b></p>
+        <section id="tile-container">
+            <div id="curWeather">
+                <section id="temperature">
+                    <p id="feel">Feels Like <span id="feelTemp">55</span>°F</p>
+                    <h4>Temperature</h4>
+                    <h1>55°F</h1>
+                    <p> <span id="high"></span>°F <span id="low"></span>°F</p>
+                </section>
+                <section id="wind">
+                    <h2>Wind</h2>
+                    <p class="northMark">N</p>
+                    <div id="dial" class="w"></div>
+                    <div id="wind-info">
+                        <p> <span id="wspeed"></span>2 mph</p>
+                    </div>
+                    <ul id="wind-direction">
+                        <li><b>Direction:<span id="direction"></span></b> NW</li>
+                        <li><b>Gusts:<span id="gspeed"></span></b></li>
+                    </ul>
+                </section>
+                <section id=rain>
+                    <h3>Rain</h3>
+                    <img src="/weather/plan-images/raindrops.jpg" alt="rain">
+                </section>
+            </div>
+        </section>
+        <section id="forecast">
+            <h5>Hourly Forecast</h5>
+            <p>Current</p>
+            <ul>
+                <li>12am: 41°F</li>
+                <li>1am: 41°F</li>
+                <li>2am: 41°F</li>
+                <li>3am: 41°F</li>
+                <li>4am: 41°F</li>
+                <li>5am: 41°F</li>
+                <li>6am: 42°F</li>
+                <li>7am: 44°F</li>
+                <li>8am: 44°F</li>
+                <li>9am: 46°F</li>
+                <li>10am: 49°F</li>
+                <li>11am: 51°F</li>
+                <li>12pm: 55°F</li>
+                <li>1pm: 58°F</li>
+                <li>2pm: 62°F</li>
+                <li>3pm: 64°F</li>
+                <li>4pm: 64°F</li>
+                <li>5pm: 62°F</li>
+                <li>6pm: 61°F</li>
+                <li>7pm: 60°F</li>
+                <li>8pm: 59°F</li>
+                <li>9pm: 58°F</li>
+                <li>10pm: 52°F</li>
+                <li>11pm: 48°F</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="page-footer">
+        &copy;2018 Christopher Leavitt
+        <img src="/weather/AW_Stack_RGB.jpg">
+    </footer>
+</body>
+<script src="/weather/js/functions.js" ></script>
+<script src="/weather/js/search.js"></script>
+</html>
