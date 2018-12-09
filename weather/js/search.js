@@ -11,7 +11,7 @@ QUERY.addEventListener("keyup", function () {
 // Request data and build the list of matching locations
 function processJSON(searchValue) {
     // Get Data from the Autocomplete API
-    const API_KEY = "Your API Key Goes Here";
+    const API_KEY = "ux09OL6zmsORFnbCPnunw2WpqK1ZXfGT";
     let URL = "https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=" + API_KEY + "&q=" + searchValue;
 
     fetch(URL)
