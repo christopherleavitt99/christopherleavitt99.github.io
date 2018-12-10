@@ -44,9 +44,9 @@ function getLocationByKey(locations) {
    // return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 const searchResults = document.getElementById("searchResults")
-// searchResults.addEventListener("click", getSearchResults (evt){
-//     // Get the data values for state and city
-//     // See https://javascript.info/bubbling-and-capturing for evt.target explanation
+searchResults.addEventListener("click", getSearchResults (evt){
+    // Get the data values for state and city
+    // See https://javascript.info/bubbling-and-capturing for evt.target explanation
 //     let cityName = evt.target.dataset['city'];
 //     let stateName = evt.target.dataset['state'];
 //     console.log(cityName);
@@ -58,4 +58,4 @@ const searchResults = document.getElementById("searchResults")
 //     getData(LOCALE);
 //     }
    
-//    }); // do stuff
+   }); // do stuff
