@@ -35,3 +35,7 @@ function processJSON(searchValue) {
             searchResults.innerHTML = list;
         }).catch(error => console.log('There was an error: ', error))
 } // ends the processJSON function
+
+function searchResults() {
+searchResults.addEventListener("click", function);
+}
