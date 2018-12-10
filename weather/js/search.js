@@ -36,6 +36,9 @@ function processJSON(searchValue) {
         }).catch(error => console.log('There was an error: ', error))
 } // ends the processJSON function
 
-function searchResults() {
-searchResults.addEventListener("click", function);
+
+function getSearchResults(event) {
+    
 }
+const searchResults = document.getElementById("searchResults")
+searchResults.addEventListener("click", getSearchResults);  // do stuff
